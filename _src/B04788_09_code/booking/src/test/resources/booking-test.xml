@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+
+    <bean class="com.packtpub.springrest.booking.web.security.SecurityConfig" />
+    <bean class="com.packtpub.springrest.booking.web.security.SecurityWebApplicationInitializer" />
+
+    <bean id="bookingService" class="org.mockito.Mockito" factory-method="mock">
+        <constructor-arg value="com.packtpub.springrest.booking.BookingService" />
+    </bean>
+    <bean class="com.packtpub.springrest.booking.web.BookingsResource" />
+
+</beans>
